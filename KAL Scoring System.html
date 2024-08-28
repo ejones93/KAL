@@ -298,8 +298,8 @@
     </div>
     <script>
         // Variables that will probably change in future
-        const version = "8.0a";
-        const compatability = ["8.0a"];
+        const version = "8.0b";
+        const compatability = ["8.0a","8.0b"];
         const year = "2024";
         const months = ["04","05","06","07","08","09"];
         const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Swan Archers"];
@@ -1054,12 +1054,12 @@
             return sorterPos(a, b);
         }
         function sorterPos(a, b) {
-            let targetA = a.targetNo;
-            let targetB = b.targetNo
+            const targetA = a.targetNo || parseInt(a.substring(0,a.length - 1));
+            const targetB = b.targetNo || parseInt(b.substring(0,b.length - 1));
             let targetDiff = sorter(targetA, targetB)
             if (targetDiff == 0) {
-                let posA = targetPosArray.indexOf(a.targetPos);
-                let posB = targetPosArray.indexOf(b.targetPos);
+                const posA = a.targetPos || a.substring(a.length - 1)
+                const posB = b.targetPos || b.substring(b.length - 1)
                 if (posA < posB) {return -1;}
                 if (posA > posB) {return 1;}
                 return sorterName(a, b);
