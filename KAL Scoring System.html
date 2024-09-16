@@ -987,7 +987,9 @@
                                     <td></td><td></td><td></td></tr></tbody></table>
                         <div class="sign"><div><span>Archer's Signature</span></div><div><span>Target Captain's Signature</span></div></div>
                     </div>`;
-                    index % 2 != 0 ? scoresheethtml += "<div class='pagebreak'> </div>" + title : "";
+                    if (index % 2 != 0 && index != targets.length - 1) {
+                        scoresheethtml += "<div class='pagebreak'> </div>" + title;
+                    }
                 })
             })
             targethtml += `</tbody></table>`;
