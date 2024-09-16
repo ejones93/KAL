@@ -1376,7 +1376,22 @@
             // Remove forced print orientation
             document.getElementById("orientation").innerHTML = "";
         }
+        function doc_keyUp(e) {
+            if (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyK')){
+                const current = e.target.id;
+                const field = current.replace(/\d/g, "");
+                let row = parseInt(current.replace(/\D/g, ""));
+                if (e.code === 'KeyI'){
+                    row >= archers.length -1 ? row = 0 : row ++;
+                } else if (e.code === 'KeyK'){
+                    row <= 0 ? row = archers.length -1 : row --;
+                }
+                const next = field + row;
+                document.getElementById(next).focus();
+            }
+        }        
         // Add event listeners that can't be elsewhere
+        document.addEventListener('keyup', doc_keyUp, false);
         document.getElementById('file-input').addEventListener('change', loadData, false);
     </script>
 </body>
