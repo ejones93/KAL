@@ -235,6 +235,11 @@
                 <p>The archer rows are sorted by target position by default. Clicking one of the underlined headers will sort all rows by that column. The current column being used for sorting is highlighted in green.
                    <br/>Sorting is only done on page refresh, if you want to sort again after making changes refresh the page (F5) or click on the column header again. 
                 </p>
+                <p><u>Keyboard Shortcuts</u></p>
+                <p>
+                    Tab can be used to move to the next field, Shift + Tab moves to the previous field.<br/>
+                    Ctrl + i moves to the field above the current field, pressing Ctrl + k moves to the field below. This wraps around, so pressing Ctrl + i while the top row is selected will select the bottom row etc...
+                </p>
                 <h4>click to hide</h4>
             </div>
         </div>
@@ -1381,9 +1386,9 @@
                 const current = e.target.id;
                 const field = current.replace(/\d/g, "");
                 let row = parseInt(current.replace(/\D/g, ""));
-                if (e.code === 'KeyI'){
+                if (e.code === 'KeyK'){
                     row >= archers.length -1 ? row = 0 : row ++;
-                } else if (e.code === 'KeyK'){
+                } else if (e.code === 'KeyI'){
                     row <= 0 ? row = archers.length -1 : row --;
                 }
                 const next = field + row;
