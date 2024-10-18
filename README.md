@@ -8,7 +8,7 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
-v8.0
+## v8.0
 
 Update version and compatability list
 
@@ -48,7 +48,7 @@ Legal rounds for all bowtypes changed, table below:
 |  U14 Men & Women  |  All  |  Windsor 40  |  Windsor 40  |
 |  U12 Men & Women  |  All  |  Windsor 30  |  Windsor 30  |
 
-v8.0b2
+## v8.0b2
 
 Add keyboard shortcuts to go up / down row (ctrl + i / ctrl + k)
 
