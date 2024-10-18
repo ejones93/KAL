@@ -639,13 +639,28 @@
                     case "U21":
                     case "Adult":
                         switch (this.bow) {
+                            case "Compound":
+                                switch (this.classification) {
+                                    case "EMB":
+                                    case "GMB":
+                                    case "MB":
+                                    case "B1":
+                                    case "B2":
+                                    case "B3":
+                                        requiredRound = this.gender == "Men" ? 0 : 1;
+                                        break;
+                                    case "A1":
+                                    case "A2":
+                                        requiredRound = this.gender == "Men" ? 1 : 2;
+                                        break;
+                                    case "A3":
+                                    case "UC":
+                                        requiredRound = this.gender == "Men" ? 2 : 3;
+                                        break;
+                                }
+                                break;
                             case "Barebow":
                             case "Longbow":
-                                requiredRound = this.gender == "Men" ? 1 : 2;
-                                break;
-                            case "Compound":
-                                requiredRound = this.gender == "Men" ? 0 : 1;
-                                break;
                             case "Recurve":
                                 switch (this.classification) {
                                     case "EMB":
@@ -673,13 +688,28 @@
                         break;
                     case "50+":
                         switch (this.bow) {
+                            case "Compound":
+                                switch (this.classification) {
+                                    case "EMB":
+                                    case "GMB":
+                                    case "MB":
+                                    case "B1":
+                                    case "B2":
+                                    case "B3":
+                                        requiredRound = this.gender == "Men" ? 1 : 2;
+                                        break;
+                                    case "A1":
+                                    case "A2":
+                                        requiredRound = this.gender == "Men" ? 2 : 3;
+                                        break;
+                                    case "A3":
+                                    case "UC":
+                                        requiredRound = this.gender == "Men" ? 3 : 4;
+                                        break;
+                                }
+                                break;
                             case "Barebow":
                             case "Longbow":
-                                requiredRound = this.gender == "Men" ? 2 : 3;
-                                break;
-                            case "Compound":
-                                requiredRound = this.gender == "Men" ? 1 : 2;
-                                break;
                             case "Recurve":
                                 switch (this.classification) {
                                     case "EMB":
