@@ -18,34 +18,35 @@ Pure Score Adjustment updated for 2025 Season (Barebow +62, Compound -100, Longb
 
 Legal rounds for all bowtypes changed, table below:
 
-Group	            Classification	Compound	All other bowstyles
-Adult/U21 Men	    B2 and above	St George	St George
-Adult/U21 Men	    B3	            St George	Albion
-Adult/U21 Men	    A1	            Albion	    Windsor
-Adult/U21 Men	    A2	            Albion	    Windsor 50
-Adult/U21 Men	    A3	            Windsor	    Windsor 40
-Adult/U21 Men	    Unclassified	Windsor	    Windsor 30
-Adult/U21 Women	    B3 and above	Albion	    Albion
-Adult/U21 Women	    A1	            Windsor	    Windsor
-Adult/U21 Women	    A2	            Windsor	    Windsor 50
-Adult/U21 Women	    A3	            Windsor 50	Windsor 40
-Adult/U21 Women	    Unclassified	Windsor 50	Windsor 30
-50+ Men	            B2 and above	Albion	    Albion
-50+ Men	            B3	            Albion	    Windsor
-50+ Men	            A1	            Windsor	    Windsor 50
-50+ Men	            A2	            Windsor	    Windsor 40
-50+ Men	            A3	            Windsor 50	Windsor 30
-50+ Men	            Unclassified	Windsor 50	Windsor 30
-50+ Women	        B2 and above	Windsor	    Windsor
-50+ Women	        B3	            Windsor	    Windsor 50
-50+ Women	        A1	            Windsor 50	Windsor 40
-50+ Women	        A2	            Windsor 50	Windsor 30
-50+ Women	        A3	            Windsor 40	Windsor 30
-50+ Women	        Unclassified	Windsor 40	Windsor 30
-U18 Men & Women	    All	            Windsor	    Windsor
-U16/15 Men & Women	All	            Windsor 50	Windsor 50
-U14 Men & Women	    All	            Windsor 40	Windsor 40
-U12 Men & Women	    All	            Windsor 30	Windsor 30
+|  Group  |  Classification  |  Compound  |  All other bowstyles  |
+|---|---|---|---|
+|  Adult/U21 Men  |  B2 and above  |  St George  |  St George  |
+|  Adult/U21 Men  |  B3  |  St George  |  Albion  |
+|  Adult/U21 Men  |  A1  |  Albion  |  Windsor  |
+|  Adult/U21 Men  |  A2  |  Albion  |  Windsor 50  |
+|  Adult/U21 Men  |  A3  |  Windsor  |  Windsor 40  |
+|  Adult/U21 Men  |  Unclassified  |  Windsor  |  Windsor 30  |
+|  Adult/U21 Women  |  B3 and above  |  Albion  |  Albion  |
+|  Adult/U21 Women  |  A1  |  Windsor  |  Windsor  |
+|  Adult/U21 Women  |  A2  |  Windsor  |  Windsor 50  |
+|  Adult/U21 Women  |  A3  |  Windsor 50  |  Windsor 40  |
+|  Adult/U21 Women  |  Unclassified  |  Windsor 50  |  Windsor 30  |
+|  50+ Men  |  B2 and above  |  Albion  |  Albion  |
+|  50+ Men  |  B3  |  Albion  |  Windsor  |
+|  50+ Men  |  A1  |  Windsor  |  Windsor 50  |
+|  50+ Men  |  A2  |  Windsor  |  Windsor 40  |
+|  50+ Men  |  A3  |  Windsor 50  |  Windsor 30  |
+|  50+ Men  |  Unclassified  |  Windsor 50  |  Windsor 30  |
+|  50+ Women  |  B2 and above  |  Windsor  |  Windsor  |
+|  50+ Women  |  B3  |  Windsor  |  Windsor 50  |
+|  50+ Women  |  A1  |  Windsor 50  |  Windsor 40  |
+|  50+ Women  |  A2  |  Windsor 50  |  Windsor 30  |
+|  50+ Women  |  A3  |  Windsor 40  |  Windsor 30  |
+|  50+ Women  |  Unclassified  |  Windsor 40  |  Windsor 30  |
+|  U18 Men & Women  |  All  |  Windsor  |  Windsor  |
+|  U16/15 Men & Women  |  All  |  Windsor 50  |  Windsor 50  |
+|  U14 Men & Women  |  All  |  Windsor 40  |  Windsor 40  |
+|  U12 Men & Women  |  All  |  Windsor 30  |  Windsor 30  |
 
 v8.0b2
 
