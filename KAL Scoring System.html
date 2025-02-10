@@ -393,7 +393,6 @@
                     ${homeClubOptions}</select></div>
                 <div class="away"><label for="away">Away Team: </label>
                 <select id="away" onchange="match.away = this.value;">
-                    <option disabled>Please Select...</option>
                     ${match.away == "" ? "<option selected disabled value>Please Select...</option>" : ""}
                     ${awayClubOptions}</select></div>
                 <div class="date"><label for="date">Date: </label>
