@@ -8,6 +8,15 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.1
+Update version and compatability list
+
+Changed Swan Archers to Crockenhill Archers
+
+Added Sevenoaks Archery Club
+
+Added a BYE option to the away team if there is an odd number of clubs in the league
+
 ## v8.0
 
 Update version and compatability list
