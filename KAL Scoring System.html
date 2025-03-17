@@ -303,11 +303,11 @@
     </div>
     <script>
         // Variables that will probably change in future
-        const version = "8.0";
-        const compatability = ["8.0a","8.0b","8.0"];
+        const version = "8.1";
+        const compatability = ["8.0a","8.0b","8.0","8.1"];
         const year = "2025";
         const months = ["04","05","06","07","08","09"];
-        const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Swan Archers"];
+        const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crockenhill Archers", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Sevenoaks Archery Club"];
         const adjustmentArray = [62,-100,373,0] // Barebow, Compound, Longbow, Recurve
         const targetPosArray = ["A","B","C","D","E","F"];
         // Variables that are not expected to change
@@ -349,7 +349,7 @@
                 return this._home;
             }
             set away(value){
-                if (clubs.includes(value)){
+                if (clubs.includes(value) || value == "BYE"){
                     this._away = value;
                     localStorage.setItem("away",this._away)
                 }
@@ -386,6 +386,11 @@
                     awayClubOptions += `<option value="${clubs[club]}"`
                     match.away == clubs[club] ? awayClubOptions += ` selected` : "";
                     awayClubOptions += `>${clubs[club]}</option>`;
+                }
+                if (clubs.length % 2 == 1){
+                    awayClubOptions += `<option value="BYE"`
+                    match.away == "BYE" ? awayClubOptions += ` selected` : "";
+                    awayClubOptions += `>BYE</option>`;
                 }
                 settinghtml = `<div class="home"><label for="home">Home Team: </label>
                 <select id="home" onchange="match.home = this.value;">
