@@ -8,6 +8,19 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.2
+Update verison and compatability list
+
+Loading CSV files that have been opened in Excel now works
+
+Selecting a hits/score/golds field selects the text inside to make input easier
+
+Removed Crockenhill Archers
+
+Add ctrl + m as shortcut to go down a row
+
+Renamed the 'print' buttons to 'show'
+
 ## v8.1
 Update version and compatability list
 

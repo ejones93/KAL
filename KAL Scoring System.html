@@ -215,12 +215,12 @@
                     <li>Choose how many archers you want to add for your team (more can be added later), select home, click add</li>
                     <li>Enter details for each archer</li>
                     <li>Click 'Save Data' to avoid any changes being lost</li>
-                    <li>Click 'Print Scoresheets' to print all of the scoresheets required</li>
+                    <li>Click 'Show Scoresheets' to show all of the scoresheets required, use Ctrl + P to print</li>
                 </ul>
                 <p><u>On the day of the match</u></p>
                 <ul>
                     <li>Once the shoot has finished enter the hits, score and golds for each archer</li>
-                    <li>Click 'Print Results' to get the final results</li>
+                    <li>Click 'Show Results' to get the final results</li>
                     <li>Click 'Save Data' to download the full results from the shoot, please email a copy to all@kentarcheryleague.co.uk, and send a copy of all scoresheets to the league Records Officer</li>
                 </ul>
                 <p><u>Formatting</u></p>
@@ -260,9 +260,9 @@
         </div>
         <div id="buttons">
             <div id="print">
-                <button onclick="targetList()">Print Target List</button>
-                <button onclick="scoresheets()">Print Scoresheets</button>
-                <button onclick="results()">Print Results</button>
+                <button onclick="targetList()">Show Target List</button>
+                <button onclick="scoresheets()">Show Scoresheets</button>
+                <button onclick="results()">Show Results</button>
                 <button hidden id="unhide" onclick="unhideMain()">Back</button>
             </div>
             <div id="data">
@@ -303,11 +303,11 @@
     </div>
     <script>
         // Variables that will probably change in future
-        const version = "8.1";
-        const compatability = ["8.0a","8.0b","8.0","8.1"];
+        const version = "8.2";
+        const compatability = ["8.0a","8.0b","8.0","8.1","8.2"];
         const year = "2025";
         const months = ["04","05","06","07","08","09"];
-        const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crockenhill Archers", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Sevenoaks Archery Club"];
+        const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Sevenoaks Archery Club"];
         const adjustmentArray = [62,-100,373,0] // Barebow, Compound, Longbow, Recurve
         const targetPosArray = ["A","B","C","D","E","F"];
         // Variables that are not expected to change
@@ -883,6 +883,11 @@
                     document.getElementById(`targetNo${this._index}`).classList.add("error");
                     document.getElementById(`targetPos${this._index}`).classList.add("error");
                 }
+                document.getElementById(`hc${this.index}`).addEventListener(`focus`, () => document.getElementById(`hc${this.index}`).select());
+                document.getElementById(`hits${this.index}`).addEventListener(`focus`, () => document.getElementById(`hits${this.index}`).select());
+                document.getElementById(`score${this.index}`).addEventListener(`focus`, () => document.getElementById(`score${this.index}`).select());
+                document.getElementById(`golds${this.index}`).addEventListener(`focus`, () => document.getElementById(`golds${this.index}`).select());
+
             }
             saveData() {
                 localStorage.setItem(this.id, JSON.stringify(this))
@@ -1368,15 +1373,17 @@
             var reader = new FileReader();
             reader.onload = function(e) {
                 var contents = e.target.result.split("\r\n");
-                if (contents[0] == "SETTINGS"){
+                if (contents[0] == "SETTINGS" || contents[0] == "SETTINGS,,,,,,,,,,,,,,,,"){
                     archers = [];
                     localStorage.clear();
                     let matchObj = (o = {}, [o.home, o.away, o.date, o.sortby, o.version] = contents[2].split(","), o)
                     match = new Settings({...matchObj});
                     for (let i = 5; i < contents.length; i++) {
-                        const id = "id" + Math.random().toString(26).slice(2)
-                        let archerObj = (o = {}, [o.targetNo, o.targetPos, o.name, o.team, o.bow, o.gender, o.age, o.classification, o.hc, o.round, o.hits, o.score, o.golds] = contents[i].split(","), o)
-                        archers.push(new Archer({...archerObj}));
+                        if(contents[i].length > 0){
+                            const id = "id" + Math.random().toString(26).slice(2)
+                            let archerObj = (o = {}, [o.targetNo, o.targetPos, o.name, o.team, o.bow, o.gender, o.age, o.classification, o.hc, o.round, o.hits, o.score, o.golds] = contents[i].split(","), o)
+                            archers.push(new Archer({...archerObj}));
+                        }
                     }
                     window.location.reload();
                 }
@@ -1416,11 +1423,11 @@
             document.getElementById("orientation").innerHTML = "";
         }
         function doc_keyUp(e) {
-            if (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyK')){
+            if (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyK'  || e.code === 'KeyM')){
                 const current = e.target.id;
                 const field = current.replace(/\d/g, "");
                 let row = parseInt(current.replace(/\D/g, ""));
-                if (e.code === 'KeyK'){
+                if (e.code === 'KeyK' || e.code === 'KeyM'){
                     row >= archers.length -1 ? row = 0 : row ++;
                 } else if (e.code === 'KeyI'){
                     row <= 0 ? row = archers.length -1 : row --;
