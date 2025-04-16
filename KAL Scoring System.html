@@ -813,7 +813,7 @@
                     archerhtml += `>${element}</option>`;
                 })
                 archerhtml += `</select></td>
-                    <td><input id="hc${this.index}" type="number" min="0" max="150" value="${this.hc}" onchange="archers[${this.index}].hc = this.value;"></td>
+                    <td class="hide-arrows"><input id="hc${this.index}" type="number" min="0" max="150" value="${this.hc}" onchange="archers[${this.index}].hc = this.value;"></td>
                     <td><select id="round${this.index}" value="${this.round}" onchange="archers[${this.index}].round = this.value;">`;
                 roundArray.forEach(element => {
                     archerhtml += `<option value="${element}"`;
