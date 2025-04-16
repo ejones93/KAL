@@ -171,6 +171,14 @@
             min-width: 1rem;
             border: none;
         }
+        .hide-arrows input::-webkit-outer-spin-button,
+        .hide-arrows input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .hide-arrows input {
+            -moz-appearance: textfield;
+        }
     </style>
     <style type="text/css" media="print">
         #buttons { 
@@ -206,22 +214,22 @@
                 <ul>
                     <li>Set the Home and Away clubs, as well as the date of the match</li>
                     <li>Choose how many archers you want to add for your team (more can be added later), select away, click add</li>
-                    <li>Enter details for each archer</li>
-                    <li>Click 'Save Data' and email the downloaded file to the KAL rep for the home club, please remember to CC all@kentarcheryleague.co.uk</li>
+                    <li>Enter details for each archer. If an archer doesn't have a handicap put in 0</li>
+                    <li>Click 'Save Data' and email the downloaded file to the KAL rep for the home club, please remember to CC all@kentarcheryleague.co.uk. The file can be found with ctrl/cmd + J on most browsers</li>
                 </ul>
                 <p><u>For the Home Team:</u>
                 <ul>
                     <li>Click on 'Load Data' and choose the file sent by the Away Team</li>
                     <li>Choose how many archers you want to add for your team (more can be added later), select home, click add</li>
-                    <li>Enter details for each archer</li>
+                    <li>Enter details for each archer. If an archer doesn't have a handicap put in 0</li>
                     <li>Click 'Save Data' to avoid any changes being lost</li>
-                    <li>Click 'Show Scoresheets' to show all of the scoresheets required, use Ctrl + P to print</li>
+                    <li>Click 'Show Scoresheets' to show all of the scoresheets required, use ctrl + P to print</li>
                 </ul>
                 <p><u>On the day of the match</u></p>
                 <ul>
                     <li>Once the shoot has finished enter the hits, score and golds for each archer</li>
                     <li>Click 'Show Results' to get the final results</li>
-                    <li>Click 'Save Data' to download the full results from the shoot, please email a copy to all@kentarcheryleague.co.uk, and send a copy of all scoresheets to the league Records Officer</li>
+                    <li>Click 'Save Data' to download the full results from the shoot, please email a copy to all@kentarcheryleague.co.uk, and send a copy of all scoresheets to the league Records Officer. The file can be found with ctrl/cmd + J on most browsers</li>
                 </ul>
                 <p><u>Formatting</u></p>
                 <ul>
@@ -238,7 +246,9 @@
                 <p><u>Keyboard Shortcuts</u></p>
                 <p>
                     Tab can be used to move to the next field, Shift + Tab moves to the previous field.<br/>
-                    Ctrl + i moves to the field above the current field, pressing Ctrl + k moves to the field below. This wraps around, so pressing Ctrl + i while the top row is selected will select the bottom row etc...
+                    Ctrl + i moves to the field above the current field, pressing Ctrl + k and Ctrl + m moves to the field below. This wraps around, so pressing Ctrl + i while the top row is selected will select the bottom row etc...
+                    Ctrl + j shows recently downloaded files and where they're stored
+                    Ctrl + p can be used to print pages
                 </p>
                 <h4>click to hide</h4>
             </div>
@@ -303,8 +313,8 @@
     </div>
     <script>
         // Variables that will probably change in future
-        const version = "8.2";
-        const compatability = ["8.0a","8.0b","8.0","8.1","8.2"];
+        const version = "8.3a";
+        const compatability = ["8.0a","8.0b","8.0","8.1","8.2","8.3a"];
         const year = "2025";
         const months = ["04","05","06","07","08","09"];
         const clubs = ["Allington Castle Archers", "Bowmen of Darenteford", "Crown Archers", "Dover Castle Archers", "Fox Archers", "Gravesend Archers", "Medway Archers", "Sevenoaks Archery Club"];
@@ -811,9 +821,9 @@
                     archerhtml += `>${element}</option>`;
                 })
                 archerhtml += `</select></td>
-                    <td><input id="hits${this.index}" type="number" min="0" max="108" value="${this.hits}" onchange="archers[${this.index}].hits = this.value;"></td>
-                    <td><input id="score${this.index}" type="number" min="0" max="972" value="${this.score}" onchange="archers[${this.index}].score = this.value;"></td>
-                    <td><input id="golds${this.index}" type="number" min="0" max="108" value="${this.golds}" onchange="archers[${this.index}].golds = this.value;"></td>
+                    <td class="hide-arrows"><input id="hits${this.index}" type="number" min="0" max="108" value="${this.hits}" onchange="archers[${this.index}].hits = this.value;"></td>
+                    <td class="hide-arrows"><input id="score${this.index}" type="number" min="0" max="972" value="${this.score}" onchange="archers[${this.index}].score = this.value;"></td>
+                    <td class="hide-arrows"><input id="golds${this.index}" type="number" min="0" max="108" value="${this.golds}" onchange="archers[${this.index}].golds = this.value;"></td>
                     <td class="hide"><span id="adjustment${this.index}">${this.adjustment}</span></td>
                     <td class="hidemore"><span id="purescore${this.index}">${this.purescore}</span></td>
                     <td class="hide"><span id="allowance${this.index}">${this.allowance}</span></td>
