@@ -8,6 +8,13 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.3
+Update verison and compatability list
+
+Update how-to with keyboard shortcuts 
+
+Removed number controls (up/down arrows) from Hits, Score, Golds and HC fields
+
 ## v8.2
 Update verison and compatability list
 
