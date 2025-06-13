@@ -8,6 +8,11 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.4
+Update verison and compatability list
+
+Fixed bug incorrectly labelling Womens 50+ Recurve as below minimum round for archers A1 and below.
+
 ## v8.3
 Update verison and compatability list
 
