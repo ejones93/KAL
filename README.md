@@ -8,6 +8,18 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.5
+Update verison and compatability list
+
+Update purescore allowance values as agreed at AGM.
+
+Crockenhill Archers added to list of teams.
+
+Exports file as .kal instead .csv.
+
+Change gender "Men" to "Men/Open", and "AGB Gender" to "AGB Group".
+
+# Changes
 ## v8.4
 Update verison and compatability list
 
