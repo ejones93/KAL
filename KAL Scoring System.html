@@ -1392,6 +1392,9 @@
                         if(contents[i].length > 0){
                             const id = "id" + Math.random().toString(26).slice(2)
                             let archerObj = (o = {}, [o.targetNo, o.targetPos, o.name, o.team, o.bow, o.gender, o.age, o.classification, o.hc, o.round, o.hits, o.score, o.golds] = contents[i].split(","), o)
+                            if(archerObj[5] == "Men"){
+                                archerObj[5] = "Men/Open"
+                            }
                             archers.push(new Archer({...archerObj}));
                         }
                     }
