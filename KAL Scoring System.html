@@ -323,7 +323,7 @@
         // Variables that are not expected to change
         const teamArray = ["Home","Away"];
         const bowArray = ["Barebow","Compound","Longbow","Recurve"];
-        const genderArray = ["Men","Women"];
+        const genderArray = ["Men/Open","Women"];
         const ageArray = ["50+","Adult","U21","U18","U16","U15","U14","U12"];
         const classArray = ["EMB","GMB","MB","B1","B2","B3","A1","A2","A3","UC"];
         const classLongArray = ["Elite Master Bowman","Grand Master Bowman","Master Bowman","Bowman 1st Class","Bowman 2nd Class","Bowman 3rd Class","Archer 1st Class","Archer 2nd Class","Archer 3rd Class","Unclassified"];
@@ -661,15 +661,15 @@
                                     case "B1":
                                     case "B2":
                                     case "B3":
-                                        requiredRound = this.gender == "Men" ? 0 : 1;
+                                        requiredRound = this.gender == "Men/Open" ? 0 : 1;
                                         break;
                                     case "A1":
                                     case "A2":
-                                        requiredRound = this.gender == "Men" ? 1 : 2;
+                                        requiredRound = this.gender == "Men/Open" ? 1 : 2;
                                         break;
                                     case "A3":
                                     case "UC":
-                                        requiredRound = this.gender == "Men" ? 2 : 3;
+                                        requiredRound = this.gender == "Men/Open" ? 2 : 3;
                                         break;
                                 }
                                 break;
@@ -682,7 +682,7 @@
                                     case "MB":
                                     case "B1":
                                     case "B2":
-                                        requiredRound = this.gender == "Men" ? 0 : 1;
+                                        requiredRound = this.gender == "Men/Open" ? 0 : 1;
                                         break;
                                     case "B3":
                                         requiredRound = 1;
@@ -710,15 +710,15 @@
                                     case "B1":
                                     case "B2":
                                     case "B3":
-                                        requiredRound = this.gender == "Men" ? 1 : 2;
+                                        requiredRound = this.gender == "Men/Open" ? 1 : 2;
                                         break;
                                     case "A1":
                                     case "A2":
-                                        requiredRound = this.gender == "Men" ? 2 : 3;
+                                        requiredRound = this.gender == "Men/Open" ? 2 : 3;
                                         break;
                                     case "A3":
                                     case "UC":
-                                        requiredRound = this.gender == "Men" ? 3 : 4;
+                                        requiredRound = this.gender == "Men/Open" ? 3 : 4;
                                         break;
                                 }
                                 break;
@@ -731,16 +731,16 @@
                                     case "MB":
                                     case "B1":
                                     case "B2":
-                                        requiredRound = this.gender == "Men" ? 1 : 2;
+                                        requiredRound = this.gender == "Men/Open" ? 1 : 2;
                                         break;
                                     case "B3":
-                                        requiredRound = this.gender == "Men" ? 2 : 3;
+                                        requiredRound = this.gender == "Men/Open" ? 2 : 3;
                                         break;
                                     case "A1":
-                                        requiredRound = this.gender == "Men" ? 3 : 4;
+                                        requiredRound = this.gender == "Men/Open" ? 3 : 4;
                                         break;
                                     case "A2":
-                                        requiredRound = this.gender == "Men" ? 4 : 5;
+                                        requiredRound = this.gender == "Men/Open" ? 4 : 5;
                                         break;
                                 }
                                 break;
@@ -917,7 +917,7 @@
                 this._name = "";
                 this._team = "Home";
                 this._bow = "Recurve";
-                this._gender = "Men";
+                this._gender = "Men/Open";
                 this._age = "50+";
                 this._classification = "UC";
                 this._hc = "";
