@@ -1221,7 +1221,7 @@
             link.setAttribute("href", encodedUri);
             const homeTeam = match.home.split(" ").map((n)=>n[0]).join("");
             const awayTeam = match.away.split(" ").map((n)=>n[0]).join("");
-            link.setAttribute("download", homeTeam + "-" + awayTeam + "-" + match.date + ".csv");
+            link.setAttribute("download", homeTeam + "-" + awayTeam + "-" + match.date + ".kal");
             document.body.appendChild(link); // Required for FF
             link.click();
         }         
