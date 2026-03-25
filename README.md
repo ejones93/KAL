@@ -8,6 +8,11 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.6
+Update version and compatability list
+
+Update legal rounds for juniors
+
 ## v8.5
 Update verison and compatability list
 
