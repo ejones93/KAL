@@ -641,14 +641,86 @@
                 
                 switch(this.age) {
                     case "U14":
-                        requiredRound = 4;
+                        switch (this.classification) {
+                            case "EMB":
+                            case "GMB":
+                            case "MB":
+                            case "B1":
+                            case "B2":
+                            case "B3":
+                                requiredRound = 4;
+                                break;
+                            case "A1":
+                            case "A2":
+                            case "A3":
+                            case "UC":
+                                requiredRound = 5;
+                                break;
+                        }
                         break;
                     case "U15":
+                        switch (this.classification) {
+                            case "EMB":
+                            case "GMB":
+                            case "MB":
+                            case "B1":
+                            case "B2":
+                            case "B3":
+                                requiredRound = 3;
+                                break;
+                            case "A1":
+                                requiredRound = 4;
+                                break;
+                            case "A2":
+                            case "A3":
+                            case "UC":
+                                requiredRound = 5;
+                                break;
+                        }
+                        break;
                     case "U16":
-                        requiredRound = 3;
+                        switch (this.classification) {
+                            case "EMB":
+                            case "GMB":
+                            case "MB":
+                            case "B1":
+                            case "B2":
+                                requiredRound = this.gender == "Men/Open" ? 2 : 3;
+                                break;
+                            case "B3":
+                                requiredRound = 3;
+                                break;
+                            case "A1":
+                                requiredRound = 4;
+                                break;
+                            case "A2":
+                            case "A3":
+                            case "UC":
+                                requiredRound = this.bow == "Compound" && this.gender == "Men/Open" ? 4 : 5;
+                                break;
+                        }
                         break;
                     case "U18":
-                        requiredRound = 2;
+                        switch (this.classification) {
+                            case "EMB":
+                            case "GMB":
+                            case "MB":
+                            case "B1":
+                            case "B2":
+                            case "B3":
+                                requiredRound = 2;
+                                break;
+                            case "A1":
+                                requiredRound = 3;
+                                break;
+                            case "A2":
+                                requiredRound = 4;
+                                break;
+                            case "A3":
+                            case "UC":
+                                requiredRound = this.bow == "Compound" ? 4 : 5;
+                                break;
+                        }
                         break;
                     case "U21":
                     case "Adult":
