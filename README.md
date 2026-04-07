@@ -8,6 +8,11 @@ Data can be exported/imported to/from a .CSV file.
 Tested on Chrome, Opera, Edge
 
 # Changes
+## v8.7
+Update version and compatability list.
+
+Fix bug allowing adjusted purescore to be over maximum score for round. 
+
 ## v8.6
 Update version and compatability list
 
@@ -24,7 +29,6 @@ Exports file as .kal instead .csv.
 
 Change gender "Men" to "Men/Open", and "AGB Gender" to "AGB Group".
 
-# Changes
 ## v8.4
 Update verison and compatability list
 
