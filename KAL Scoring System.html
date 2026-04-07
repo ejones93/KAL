@@ -613,6 +613,9 @@
                     return "";
                 } else {
                     this._purescore = this.score + this.adjustment;
+                    if (this._purescore > 972){
+                        this._purescore = 972;
+                    }
                     this.saveData();
                     return this._purescore;
                 }
